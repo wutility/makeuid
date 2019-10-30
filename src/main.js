@@ -5,8 +5,8 @@ function makeuid () {
 function randStr (len) {
   var result = '';
   var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  var charsLen = chars.length;
-  for (var i = 0; i < len; i++) {
+  var charsLen = chars.length, i = 0;
+  for (; i < len; i++) {
     result += chars.charAt(Math.floor(Math.random() * charsLen));
   }
   return result;

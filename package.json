@@ -1,6 +1,6 @@
 {
   "name": "makeuid",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Tiny utility to generate a unique id based on date and time",
   "main": "build/index.js",
   "scripts": {

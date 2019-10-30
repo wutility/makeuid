@@ -9,14 +9,14 @@ npm i makeuid --save
 
 ## Usage
 ```js
-import makeuid from 'makeuid'
+import { makeuid, randStr } from 'makeuid'
 // or
-var makeuid = require('makeuid')
+var { makeuid, randStr } = require('makeuid')
 ```
 
 Or include it via jsDelivr CDN:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/makeuid@0.0.1/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/makeuid@0.0.3/index.min.js"></script>
 mk.makeuid() // 2019b10b30T12b25b54
 ```
 
@@ -27,7 +27,7 @@ makeuid() // 2019b10b30T12b25b54
 ```
 - **randStr(length : number) : String**
 ```js
-randStr() // gJisd
+randStr(5) // gJisd
 ```
 
 ## License
