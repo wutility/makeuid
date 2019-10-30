@@ -16,7 +16,7 @@ var { makeuid, randStr } = require('makeuid')
 
 Or include it via jsDelivr CDN:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/makeuid@0.0.3/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/makeuid@0.0.4/index.min.js"></script>
 mk.makeuid() // 2019b10b30T12b25b54
 ```
 

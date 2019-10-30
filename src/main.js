@@ -11,5 +11,4 @@ function randStr (len) {
   }
   return result;
 }
-
-exports = { makeuid, randStr }
+export { makeuid, randStr }

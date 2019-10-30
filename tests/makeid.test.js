@@ -1,1 +1,2 @@
-var makeuid = require('../build/index')
+var { makeuid } = require('../index')
+console.log(makeuid());
