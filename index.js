@@ -4,19 +4,22 @@
   (global = global || self, factory(global.mk = {}));
 }(this, function (exports) { 'use strict';
   function makeuid() {
-    return new Date().toISOString().slice(0, 19).replace(/[-:]/g, randStr(1));
+    var d = new Date().toISOString().slice(0, 19),r = '',i = 0,l = d.length;
+    for (; i < l; i++) {
+      var e = d[i];
+      r += e === '-' || e === ':' ? randStr(1) : e;
+    }
+    return r
   }
   function randStr(len) {
-    var result = '';
     var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    var charsLen = chars.length,
-        i = 0;
+    var r = '',charsLen = chars.length,i = 0;
     for (; i < len; i++) {
-      result += chars.charAt(Math.floor(Math.random() * charsLen));
+      r += chars.charAt(Math.floor(Math.random() * charsLen));
     }
-    return result;
+    return r
   }
   exports.makeuid = makeuid;
   exports.randStr = randStr;
-  Object.defineProperty(exports, '__esModule', { value: true })
-}))
+  Object.defineProperty(exports, '__esModule', { value: true });
+}));

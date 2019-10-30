@@ -1,14 +1,18 @@
-function makeuid () {
-  return new Date().toISOString().slice(0, 19).replace(/[-:]/g, randStr(1))
+function makeuid () { // 2019-10-26T22:20:30
+  let d = new Date().toISOString().slice(0, 19), r = '', i = 0, l = d.length;
+  for (; i < l; i++) {
+    let e = d[i];
+    r += e === '-' || e === ':' ? randStr(1) : e
+  }
+  return r
 }
 
 function randStr (len) {
-  var result = '';
-  var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  var charsLen = chars.length, i = 0;
+  let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  let r = '', charsLen = chars.length, i = 0;
   for (; i < len; i++) {
-    result += chars.charAt(Math.floor(Math.random() * charsLen));
+    r += chars.charAt(Math.floor(Math.random() * charsLen));
   }
-  return result;
+  return r;
 }
 export { makeuid, randStr }
